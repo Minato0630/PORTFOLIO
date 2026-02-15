@@ -1,19 +1,13 @@
 {
-  "name": "portfolio-site",
+  "name": "gokul-portfolio",
   "version": "1.0.0",
-  "main": "server.js",
+  "private": true,
+  "description": "Gokul S Portfolio Website (Vercel Static + Serverless)",
   "scripts": {
-    "start": "node server.js"
+    "dev": "vercel dev",
+    "build": "echo \"No build step needed\""
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.22.1",
-    "mongodb": "^7.1.0",
-    "mongoose": "^7.3.4"
-  },
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+    "mongodb": "^6.5.0"
+  }
 }
