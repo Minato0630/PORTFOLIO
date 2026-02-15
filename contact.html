@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Gokul — Contact</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-c">
+  <canvas id="heroParticles" class="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html">Gokul<span class="dot">•</span></a></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <button id="themeToggle4" class="icon-btn" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-section">
+      <div class="contact-panel neon-card hover-tilt">
+        <h2>Let’s Talk</h2>
+        <p class="muted">Questions, opportunities, or collaborations — send a message.</p>
+
+        <form id="contactForm" class="contact-form" autocomplete="on">
+          <input id="name" name="name" placeholder="Your name" required>
+          <input id="email" name="email" type="email" placeholder="Email" required>
+          <textarea id="message" name="message" rows="6" placeholder="Message" required></textarea>
+
+          <div class="form-row">
+            <button type="submit" class="btn primary neon-btn">Send Message</button>
+            <p id="contactStatus" aria-live="polite" class="muted"></p>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <p>📍 Dindigul, Tamil Nadu, India</p>
+          <p>📧 pandiyagokul@gmail.com</p>
+          <p>📞 +91 6369562212</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year4"></span> Gokul — Contact</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

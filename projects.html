@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Gokul — Projects</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-c">
+  <canvas id="heroParticles" class="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">Gokul<span class="dot">•</span></a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+       <button id="themeToggle4" class="icon-btn" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- ===================== PROJECTS BODY ===================== -->
+    <section class="projects-hero filter-scope">
+
+
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">Web and application projects</p>
+
+        <!-- PROJECT FILTERS -->
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="game">Game</button>
+        </div>
+      </div>
+
+      <!-- PROJECT GRID -->
+      <div class="project-grid">
+
+        <article class="project-card hover-tilt" data-type="web">
+          <img src="assets/proj1.png" alt="Knowzilla">
+          <div class="proj-body">
+            <h3>KNOWZILLA — Online Quiz Portal</h3>
+            <p>Web-based quiz system with real-time scoring.</p>
+            <div class="proj-meta">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card hover-tilt" data-type="game">
+          <img src="assets/proj3.png" alt="Ryuk Game">
+          <div class="proj-body">
+            <h3>Ryuk Running Game</h3>
+            <p>Endless runner browser game.</p>
+            <div class="proj-meta">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS BODY ===================== -->
+    <section class="projects-hero filter-scope">
+
+
+      <div class="section-head">
+        <h2>Certifications</h2>
+        <p class="muted">Professional certifications & design skills</p>
+
+        <!-- CERTIFICATION FILTERS -->
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="database">Database</button>
+          <button class="filter" data-filter="design">Design</button>
+          <button class="filter" data-filter="analysis">Analysis</button>
+        </div>
+      </div>
+
+      <!-- CERTIFICATION GRID -->
+      <div class="project-grid">
+
+        <article class="project-card hover-tilt" data-type="database">
+          <img src="assets/profile.jpg" alt="MongoDB">
+          <div class="proj-body">
+            <h3>MongoDB Basics for Students</h3>
+            <p>NoSQL fundamentals and CRUD operations.</p>
+            <div class="proj-meta">
+              <span>MongoDB</span><span>NoSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card hover-tilt" data-type="design">
+          <img src="assets/profile.jpg" alt="UI UX">
+          <div class="proj-body">
+            <h3>UI/UX Design MasterClass</h3>
+            <p>User interface and experience design principles.</p>
+            <div class="proj-meta">
+              <span>UI</span><span>UX</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card hover-tilt" data-type="analysis">
+          <img src="assets/profile.jpg" alt="Data Analyst">
+          <div class="proj-body">
+            <h3>Data Analyst Certification</h3>
+            <p>Data analysis and problem-solving skills.</p>
+            <div class="proj-meta">
+              <span>Analytics</span><span>Data</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> Gokul — Projects</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT (UNCHANGED) -->
+  <script src="script.js"></script>
+</body>
+</html>
