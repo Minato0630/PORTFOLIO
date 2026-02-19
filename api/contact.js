@@ -1,6 +1,18 @@
 import { MongoClient } from "mongodb";
 
-let cachedClient = null;
+let client;
+let clientPromise;
+
+const uri = process.env.MONGO_URI;
+
+if (!uri) {
+  throw new Error("Please define MONGO_URI in Vercel Environment Variables");
+}
+
+if (!clientPromise) {
+  client = new MongoClient(uri);
+  clientPromise = client.connect();
+}
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -14,12 +26,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    if (!cachedClient) {
-      cachedClient = new MongoClient(process.env.MONGO_URI);
-      await cachedClient.connect();
-    }
+    const client = await clientPromise;
+    const db = client.db("portfolio");
 
-    const db = cachedClient.db("portfolio");
     await db.collection("contacts").insertOne({
       name,
       email,
@@ -27,9 +36,9 @@ export default async function handler(req, res) {
       created_at: new Date()
     });
 
-    res.status(200).json({ success: true });
+    return res.status(200).json({ success: true });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Database error" });
+    return res.status(500).json({ error: "Database error" });
   }
 }

@@ -4,7 +4,6 @@
   "private": true,
   "description": "Gokul S Portfolio Website (Vercel Static + Serverless)",
   "scripts": {
-    "dev": "vercel dev",
     "build": "echo \"No build step needed\""
   },
   "dependencies": {
